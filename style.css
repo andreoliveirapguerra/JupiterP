@@ -62,10 +62,14 @@ Last Update: Dec 31, 2018
   margin: 0;
   padding: 0; }
 
-body {
+body 
+{
   font-family: "Aileron";
   font-weight: 400;
-  font-size: 14px; }
+  font-size: 14px;
+  background-color: #c0653c;
+  color: #369AD6;
+}
 
 h1,
 h2,
@@ -409,7 +413,7 @@ input:focus {
   color: #A8686E;
   border: none;
   border-radius: 50px;
-  background-color: #ffffff;
+  background-color: #c0653c;
   -webkit-transition-duration: 500ms;
   -o-transition-duration: 500ms;
   transition-duration: 500ms;
