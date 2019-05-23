@@ -1,0 +1,221 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <conio.h>  //clrscr
+
+#define BUFFER 64
+
+typedef struct lista{
+    char *nome;
+    char emal;
+    int cell;
+    int mat;
+    char setor;
+    struct lista *next;
+}Dados;
+
+
+Dados *inicia_dados(char *nome,char emal,char setor, int mat, int cell);
+Dados *insere_dados(Dados *dados, char *nome,char emal,char setor, int mat, int cell);
+void exibe_dados(Dados *dados);
+Dados *deleta_dados(Dados *dados);
+int checa_vazio(Dados *dados);
+
+void insere(void);
+void exibe(void);
+void busca(void);
+void deleta(void);
+
+Dados *principal = NULL;
+
+Dados *inicia_dados(char *nome,char emal,char setor, int mat, int cell) {
+
+        Dados *novo;
+
+        novo = (Dados *)malloc(sizeof(Dados));
+        novo->nome = (char *)malloc(strlen(nome)+1);
+        strncpy(novo->nome, nome, strlen(nome)+1);
+        novo->emal = emal;
+        novo->setor = setor;
+        novo->mat = mat;
+        novo->cell = cell;
+        novo->next = NULL;
+
+        return novo;
+}
+
+Dados *insere_dados(Dados *dados, char *nome,char emal,char setor, int mat, int cell) {
+
+        Dados *novo;
+
+        novo = (Dados *)malloc(sizeof(Dados));
+        novo->nome = (char *)malloc(strlen(nome)+1);
+        strncpy(novo->nome, nome, strlen(nome)+1);
+        novo->emal = emal;
+        novo->setor = setor;
+        novo->mat = mat;
+        novo->cell = cell;
+        novo->next = dados;
+
+        return novo;
+}
+
+void exibe_dados(Dados *dados) {
+
+        fprintf(stdout, "Cadastrados:\n\n");
+
+        fprintf(stdout, "------------------------\n");
+
+        for (; dados != NULL; dados = dados->next) {
+                fprintf(stdout, "Nome: %s\n", dados->nome);
+                fprintf(stdout, "Email: %s\n", dados->emal);
+                fprintf(stdout, "Telefone: %d\n", dados->cell);
+                fprintf(stdout, "Matrícula: %d\n", dados->mat);
+                fprintf(stdout, "Setor: %s\n", dados->setor);
+                fprintf(stdout, "------------------------\n ");
+        }
+        printf("Pressione uma tecla para continuar.");
+        getch();
+}
+
+Dados *deleta_dados(Dados *dados) {
+
+        Dados *novo;
+
+        novo = dados->next;
+
+        free(dados->nome);
+        free(dados);
+
+        fprintf(stdout, "O ultimo registro inserido foi deletado com sucesso.\n");
+        sleep(1);
+
+        return novo;
+}
+
+
+int checa_vazio(Dados *dados) {
+
+
+        if (dados == NULL) {
+                fprintf(stdout, "Lista vazia!\n");
+                sleep(1);
+                return 1;
+        } else
+                return 0;
+}
+
+void insere(void) {
+
+        char *nome, emal, setor;
+        int mat, cell;
+
+        nome = (char *)malloc(BUFFER);
+
+        fprintf(stdout, "\n\nNome: \n----> ");
+        scanf("%s", nome);
+        fprintf(stdout, "\n");
+
+        fprintf(stdout, "Email: \n----> ");
+        scanf("%s", &emal);
+        fprintf(stdout, "\n");
+        
+        fprintf(stdout, "Telefone: \n----> ");
+        scanf("%d", &cell);
+        fprintf(stdout, "\n");
+        
+        fprintf(stdout, "Matrícula: \n----> ");
+        scanf("%d", &mat);
+        fprintf(stdout, "\n");
+        
+        fprintf(stdout, "Setor: \n----> ");
+        scanf("%s", &setor);
+        fprintf(stdout, "\n");
+
+        if (principal == NULL)
+                principal = inicia_dados(nome, emal, cell, mat, setor);
+        else
+                principal = insere_dados(principal, nome, emal, cell, mat, setor);
+}
+
+void exibe(void) {
+
+        if (!checa_vazio(principal))
+                exibe_dados(principal);
+
+}
+
+
+void deleta(void) {
+
+        if (!checa_vazio(principal))
+                principal = deleta_dados(principal);
+}
+
+
+void cabecalho(void)
+{
+  printf("*******************************\n");   
+  printf("*          BEM VINDO          *\n");
+  printf("*******************************\n");   
+
+  return;
+}
+
+
+int main(void) {
+
+        cabecalho();
+        printf("\nPressione Enter para comecar!!!");
+        scanf("Pressione Enter para comecar!!!");
+        
+        char escolha;
+
+        printf("\n 1 -> Enviar");
+        printf("\n 2 -> Cadastrar");
+        scanf()
+        do {
+                system("cls"); 
+                fprintf(stdout, "Escolha uma opcao: \n\n");
+                fprintf(stdout, "1 - Insere Dados\n");
+                fprintf(stdout, "2 - Exibe Dados\n");
+                fprintf(stdout, "4 - Deleta Dados\n");
+                fprintf(stdout, "5 - Sair\n\n");
+
+                scanf("%c", &escolha);
+
+                switch(escolha) {
+                        case '1':
+                                insere();
+                                break;
+
+                        case '2':
+                                exibe();
+                                break;
+
+                        case '3':
+                                busca();
+                                break;
+
+                        case '4':
+                                deleta();
+                                break;
+
+                        case '5':
+                                exit(0);
+                                break;
+
+                        default:
+                                fprintf(stderr,"Digite uma opcao valida!\\n");
+                                sleep(1);
+                                break;
+                }
+
+                //getchar(); /* E para impedir sujeira na entrada da escolha. Nao lembro de nada melhor tambem.   */
+        }
+
+        while (escolha > 0); /* Loop Principal. */
+
+        return 0;
+}
