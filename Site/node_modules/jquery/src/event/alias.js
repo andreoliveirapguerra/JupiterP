@@ -1,27 +1,3 @@
-define( [
-	"../core",
-
-	"../event",
-	"./trigger"
-], function( jQuery ) {
-
-jQuery.each( ( "blur focus focusin focusout load resize scroll unload click dblclick " +
-	"mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave " +
-	"change select submit keydown keypress keyup error contextmenu" ).split( " " ),
-	function( i, name ) {
-
-	// Handle event binding
-	jQuery.fn[ name ] = function( data, fn ) {
-		return arguments.length > 0 ?
-			this.on( name, null, data, fn ) :
-			this.trigger( name );
-	};
-} );
-
-jQuery.fn.extend( {
-	hover: function( fnOver, fnOut ) {
-		return this.mouseenter( fnOver ).mouseleave( fnOut || fnOver );
-	}
-} );
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:c1ffd46d5d2adca9e727fadd99da40e2afd892b3aca1d5a7de585cbb70a37903
+size 652

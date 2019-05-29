@@ -1,21 +1,3 @@
-*.log
-Site/wp-config.php
-Site/wp-content/advanced-cache.php
-Site/wp-content/backup-db/
-Site/wp-content/backups/
-Site/wp-content/blogs.dir/
-Site/wp-content/cache/
-Site/wp-content/upgrade/
-Site/wp-content/uploads/
-Site/wp-content/mu-plugins/
-Site/wp-content/wp-cache-config.php
-Site/wp-content/plugins/hello.php
-
-Site/.htaccess
-Site/license.txt
-Site/readme.html
-Site/sitemap.xml
-Site/sitemap.xml.gz
-
-Software/node_modules
-# index2.html
+version https://git-lfs.github.com/spec/v1
+oid sha256:9e53a367b4be648f4685b1f245dddd43ae712afa7f73e03ffc2f66ce15fa7527
+size 433

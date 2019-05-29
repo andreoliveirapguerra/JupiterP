@@ -1,18 +1,3 @@
-define( function() {
-
-/**
- * Determines whether an object can have data
- */
-return function( owner ) {
-
-	// Accepts only:
-	//  - Node
-	//    - Node.ELEMENT_NODE
-	//    - Node.DOCUMENT_NODE
-	//  - Object
-	//    - Any
-	/* jshint -W018 */
-	return owner.nodeType === 1 || owner.nodeType === 9 || !( +owner.nodeType );
-};
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:16b84aea202ac71f2520c0dc287d39f9a41fce6229914a36c6bd3cf7c2d82048
+size 323

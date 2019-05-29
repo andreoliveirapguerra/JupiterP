@@ -1,24 +1,3 @@
-define( function() {
-
-function addGetHookIf( conditionFn, hookFn ) {
-
-	// Define the hook, we'll check on the first run if it's really needed.
-	return {
-		get: function() {
-			if ( conditionFn() ) {
-
-				// Hook not needed (or it's not possible to use it due
-				// to missing dependency), remove it.
-				delete this.get;
-				return;
-			}
-
-			// Hook needed; redefine it so that the support test is not executed again.
-			return ( this.get = hookFn ).apply( this, arguments );
-		}
-	};
-}
-
-return addGetHookIf;
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:4289ed4d7e08665400e9d6e03ff1d01c5d396b74061eed1bbb6fa9babfbf11f8
+size 515

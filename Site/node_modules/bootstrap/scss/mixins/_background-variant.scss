@@ -1,21 +1,3 @@
-// stylelint-disable declaration-no-important
-
-// Contextual backgrounds
-
-@mixin bg-variant($parent, $color) {
-  #{$parent} {
-    background-color: $color !important;
-  }
-  a#{$parent},
-  button#{$parent} {
-    @include hover-focus {
-      background-color: darken($color, 10%) !important;
-    }
-  }
-}
-
-@mixin bg-gradient-variant($parent, $color) {
-  #{$parent} {
-    background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x !important;
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7425ff16f881d0333938cafc087fd64e11abbdd631647e0f93f8fa56eeba465a
+size 474

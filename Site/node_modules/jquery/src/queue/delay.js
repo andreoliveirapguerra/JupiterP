@@ -1,22 +1,3 @@
-define( [
-	"../core",
-	"../queue",
-	"../effects" // Delay is optional because of this dependency
-], function( jQuery ) {
-
-// Based off of the plugin by Clint Helfers, with permission.
-// http://web.archive.org/web/20100324014747/http://blindsignals.com/index.php/2009/07/jquery-delay/
-jQuery.fn.delay = function( time, type ) {
-	time = jQuery.fx ? jQuery.fx.speeds[ time ] || time : time;
-	type = type || "fx";
-
-	return this.queue( type, function( next, hooks ) {
-		var timeout = window.setTimeout( next, time );
-		hooks.stop = function() {
-			window.clearTimeout( timeout );
-		};
-	} );
-};
-
-return jQuery.fn.delay;
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:b2507c1e2000378242ca84e4759b84fa34765a7aaec374d0bfa14f72499a8d00
+size 620

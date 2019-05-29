@@ -1,21 +1,3 @@
-define( [
-	"../core"
-], function( jQuery ) {
-
-function getAll( context, tag ) {
-
-	// Support: IE9-11+
-	// Use typeof to avoid zero-argument method invocation on host objects (#15151)
-	var ret = typeof context.getElementsByTagName !== "undefined" ?
-			context.getElementsByTagName( tag || "*" ) :
-			typeof context.querySelectorAll !== "undefined" ?
-				context.querySelectorAll( tag || "*" ) :
-			[];
-
-	return tag === undefined || tag && jQuery.nodeName( context, tag ) ?
-		jQuery.merge( [ context ], ret ) :
-		ret;
-}
-
-return getAll;
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:37249f1e6d732ce95029adac24be0f630efe1da5150d83b5383b898ed2fa3d4e
+size 539

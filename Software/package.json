@@ -1,32 +1,3 @@
-{
-  "name": "jsoft",
-  "version": "1.0.0",
-  "description": "Jupiter First software test",
-  "main": "main.js",
-  "scripts": {
-    "test": "electron ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JesuisOriginal/SiteJupiter.git"
-  },
-  "keywords": [
-    "Jupiter",
-    "Jesuis",
-    "CESAR",
-    "C.E.S.A.R.",
-    "NEOENERGIA",
-    "JavaScript",
-    "Electron",
-    "MySQL"
-  ],
-  "author": "JesuisOriginal gabrielleite751",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/JesuisOriginal/SiteJupiter/issues"
-  },
-  "homepage": "https://github.com/JesuisOriginal/SiteJupiter#readme",
-  "devDependencies": {
-    "electron": "^5.0.0"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2415efd4b6390b9112e76bfde9255e4a9cc6a3deabbd3225fbcab6e15bbb4039
+size 684

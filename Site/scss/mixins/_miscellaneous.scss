@@ -1,27 +1,3 @@
-@mixin transition($value) {
-    -webkit-transition: $value;
-    -o-transition: $value;
-    transition: $value;
-}
-
-@mixin transform($value) {
-    -webkit-transform: $value;
-    -ms-transform: $value;
-    transform: $value;
-}
-
-@mixin animation($value) {
-    -webkit-animation: $value;
-    animation: $value;
-}
-
-@mixin transition-duration($time) {
-    -webkit-transition-duration: $time;
-    -o-transition-duration: $time;
-    transition-duration: $time;
-}
-
-@mixin box-shadow($content) {
-    -webkit-box-shadow: $content;
-    box-shadow: $content;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0855a115cada128a1079b1e4c7c25c8749f1f9e4d9eaf50c671568b47f462037
+size 572

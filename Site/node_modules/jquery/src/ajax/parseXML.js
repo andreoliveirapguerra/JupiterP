@@ -1,27 +1,3 @@
-define( [
-	"../core"
-], function( jQuery ) {
-
-// Cross-browser xml parsing
-jQuery.parseXML = function( data ) {
-	var xml;
-	if ( !data || typeof data !== "string" ) {
-		return null;
-	}
-
-	// Support: IE9
-	try {
-		xml = ( new window.DOMParser() ).parseFromString( data, "text/xml" );
-	} catch ( e ) {
-		xml = undefined;
-	}
-
-	if ( !xml || xml.getElementsByTagName( "parsererror" ).length ) {
-		jQuery.error( "Invalid XML: " + data );
-	}
-	return xml;
-};
-
-return jQuery.parseXML;
-
-} );
+version https://git-lfs.github.com/spec/v1
+oid sha256:189aded2d2e9e6b2b963f6f144e4b6c2d56738578e7e8b751c8f49844d932f52
+size 480

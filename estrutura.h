@@ -1,29 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-
-#define BUFFER 100
-
-struct lista{
-	char *nome;
-	char email;
-	int tell;
-	int matricula;
-	char setor;
-	struct lista *next;
-};
-
-struct lista *inicia_dados(char *nome, char email, int tell, int matricula, char setor);
-struct lista *insere_dados(struct lista *dados, char *nome, char email, int tell, int matricula, char setor);
-void exibe_dados(struct lista *dados);
-void busca_dados(struct lista *dados, char *key);
-struct lista *deleta_dados(struct lista *dados);
-int checa_vazio(struct lista *dados);
-
-void insere(void);
-void busca(void);
-void exibe(void);
-void deleta(void);
-
-struct lista *principal = NULL;
+version https://git-lfs.github.com/spec/v1
+oid sha256:18e43cfd0aff04b15756f97b5ac2bd94c0b93c82aa9a0a20b62a82a4d3bf9fb5
+size 715

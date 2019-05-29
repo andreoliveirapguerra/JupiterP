@@ -1,27 +1,3 @@
-/* :: 5.0 Backtotop CSS */
-
-#scrollUp {
-    bottom: 50px;
-    font-size: 30px;
-    line-height: 45px;
-    right: 50px;
-    width: 50px;
-    background-color: $primary;
-    color: $white;
-    text-align: center;
-    height: 50px;
-    @include transition-duration(500ms);
-    border-radius: 50%;
-    @include box-shadow($box-shadow);
-
-    &:focus,
-    &:hover {
-        background-color: $dark;
-        color: $white;
-    }
-
-    @media #{$breakpoint-xs} {
-        right: 30px;
-        bottom: 30px;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b8aa761abda2e51d70e114c57a1c44f1741a9b56d5371e8f5844f6f4c3bf4fd0
+size 530
