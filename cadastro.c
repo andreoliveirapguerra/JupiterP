@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <windows.h>
 
 void cabecalho (void) { 
        printf("************************\n");
@@ -13,8 +12,6 @@ void cabecalho (void) {
 int main() {
 
         cabecalho();
-
-        Sleep(2000);
 
         char nome[5][50], email[5][50], matricula[5][50], tell[5][50];
         int choice;
@@ -65,39 +62,9 @@ int main() {
                                 
 
                                 if(arq == NULL) {
-                                        
-                                        printf("Criando Arquivo\n");
-                                        Sleep(500);
-                                        printf("*");
-                                        Sleep(500);
-                                        printf("*");
-                                        Sleep(500);
-                                        printf("*");
-                                        Sleep(500);
-                                        printf("*");
-                                        Sleep(500);
-                                        printf("*");
-                                        Sleep(500);
-                                        printf("*");
-                                        Sleep(500);
-                                        printf("*");
-                                        Sleep(500);
-                                        printf("*");
-                                        Sleep(500);
-                                        printf("*");
-                                        Sleep(500);
-                                        printf("*");
-                                        Sleep(500);
-                                        printf("*");
-                                        Sleep(500);
-                                        printf("*");
-                                        Sleep(500);
-                                        printf("*");
-                                        Sleep(500);
-                                        printf("*");
-                                        Sleep(500);
-                                        printf("*");
+                                       
                                         printf("\nArquivo Criado com sucesso!\n");        
+                                
                                 }
 
                                 fclose(arq);
